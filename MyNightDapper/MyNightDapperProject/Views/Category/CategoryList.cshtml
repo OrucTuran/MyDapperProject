@@ -1,0 +1,33 @@
+﻿@model List<MyNightDapperProject.DTOs.CategoryDTO.ResultCategoryDTO>
+
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+<div class="container">
+    <br /><br />
+    <table class="table table-bordered">
+        <tr>
+            <th class="centers">#</th>
+            <th class="centers">Kategori Adı</th>
+            <th class="centers">Sil</th>
+            <th class="centers">Güncelle</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="centers">@item.CategoryID</td>
+                <td class="centers">@item.CategoryName</td>
+                <td class="centers"><a href="/Category/DeleteCategory/@item.CategoryID" class="btn btn-outline-primary">Sil</a></td>
+                <td class="centers"><a href="/Category/UpdateCategory/@item.CategoryID" class="btn btn-outline-success">Güncelle</a></td>
+            </tr>
+        }
+    </table>
+    <a href="/Category/CreateCategory/" class="btn btn-outline-warning">Yeni Kategori</a>
+</div>
+<style>
+    .centers{
+        text-align:center;
+        vertical-align: middle;
+    }
+</style>

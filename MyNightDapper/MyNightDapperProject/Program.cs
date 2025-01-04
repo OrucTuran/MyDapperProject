@@ -1,5 +1,5 @@
-using MyNightDapper.Context;
-using MyNightDapper.Repositories.CategoryRepositories;
+using MyNightDapperProject.Context;
+using MyNightDapperProject.Repositories.CategoryRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
