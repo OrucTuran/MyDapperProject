@@ -45,7 +45,7 @@ namespace MyNightDapperProject.Repositories.CategoryRepositories
             var parameters = new DynamicParameters();
             parameters.Add("@categoryId", id);
             var connection = _context.CreateConnection();
-            var values = await connection.QueryFirstOrDefaultAsync<GetByIdCategoryDTO>(query);
+            var values = await connection.QueryFirstOrDefaultAsync<GetByIdCategoryDTO>(query,parameters);
             return values;
         }
 

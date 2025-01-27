@@ -1,5 +1,6 @@
 using MyNightDapperProject.Context;
 using MyNightDapperProject.Repositories.CategoryRepositories;
+using MyNightDapperProject.Repositories.ProductRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews(); // MVC için gerekli servis
 
 builder.Services.AddScoped<DapperContext>();
+
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 
 var app = builder.Build();
 

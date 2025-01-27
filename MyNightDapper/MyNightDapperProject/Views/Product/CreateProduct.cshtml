@@ -1,0 +1,21 @@
+﻿@model MyNightDapperProject.DTOs.ProductDTO.CreateProductDTO
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+
+<div class="container">
+    <br /><br />
+    <form method="post">
+        <label>Ürün Adı</label>
+        <input type="text" asp-for="ProductName"class="form-control" />
+        <br />
+        <label>Ürün Fiyatı</label>
+        <input type="number" asp-for="ProductPrice" class="form-control" />
+        <br />
+        <label>Ürün Stok Sayısı</label>
+        <input type="number" asp-for="ProductStock" class="form-control" />
+        <br />
+        <button class="btn btn-outline-info">Ürünü Ekle</button>
+    </form>
+</div>
